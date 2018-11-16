@@ -1,0 +1,35 @@
+<div class="container">
+
+    <h2>Angular Application</h2>
+
+    <div class="panel panel-primary">
+
+        <div class="panel-heading">
+          <b>Parse Invoice file from 7 segment format to numbers</b>
+        </div>
+
+        <div class="panel-body">
+           
+            <input type='file' accept='text/plain' (change)='openFile($event)' style="margin:0px auto; display:block; margin-bottom:25px;">
+            
+            <span>Input File</span>
+            
+            <textarea name="input file" cols="32" rows="10" style="margin:50px">{{inputContent}}</textarea>
+            
+            <button class="btn-info" (click)='get7segment(inputContent)' style="margin-right:180px;">Parse</button>
+            
+            <span>Output File</span>
+            
+            <textarea name="Output File" cols="32" rows="10" id="textval" style="white-space: pre-wrap; margin:50px">{{outputContent}}</textarea>
+            
+            <button class="btn-success" (click)=download()>Download</button>
+            
+        </div>
+
+    </div>
+
+
+</div>
+
+ 
+
